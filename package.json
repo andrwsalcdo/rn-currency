@@ -25,6 +25,7 @@
     "moment": "^2.20.1",
     "react": "16.2.0",
     "react-native": "0.52.0",
-    "react-native-extended-stylesheet": "^0.8.1"
+    "react-native-extended-stylesheet": "^0.8.1",
+    "react-native-iphone-x-helper": "^1.0.2"
   }
 }

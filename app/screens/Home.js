@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { StatusBar } from "react-native";
 
 import { Container } from "../components/Container";
+import { Header } from '../components/Header'; 
 import { Logo } from '../components/Logo'; 
 import { InputWithButton } from '../components/TextInput'; 
 import { ClearButton } from '../components/Button'; 
@@ -17,6 +18,11 @@ const TEMP_CONVERSION_DATE = new Date();
 
 
 class Home extends Component {
+    
+    handlePressOptions = () => {
+        console.log('handle options press');
+    }
+    
     handleTextChange = (text) => {
         console.log('change text', text);
     }
@@ -33,10 +39,12 @@ class Home extends Component {
         console.log('swapped currencies');
     }
 
+
     render() {
         return (
             <Container>
                 <StatusBar translucent={false} barStyle="light-content" />
+                <Header onPress={this.handlePressOptions} />
                 <Logo />
                 <InputWithButton 
                     buttonText={TEMP_BASE_CURR}
