@@ -10,7 +10,7 @@ EStyleSheet.build({
 	$separator: '#E2E2E2',
 	$inputText: '#545454',
 	$lightGrey: '#f0f0f0',
-	
+	$darkText: '#343434',
 	// $outline: 1
 });
 
