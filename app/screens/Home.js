@@ -8,6 +8,8 @@ import { InputWithButton } from "../components/TextInput";
 import { ClearButton } from "../components/Button";
 import { LastConverted } from "../components/Text";
 
+import { swapCurrency, changeCurrencyAmount } from "../actions/currencies";
+
 const TEMP_BASE_CURR = "USD";
 const TEMP_QUOTE_CURR = "GBP";
 const TEMP_BASE_PRICE = "100";
@@ -18,24 +20,25 @@ const TEMP_CONVERSION_DATE = new Date();
 
 class Home extends Component {
 	handlePressOptions = () => {
-		// console.log("handle options press");
-		this.props.navigation.navigate('Options'); 
+		this.props.navigation.navigate("Options");
 	};
 
-	handleTextChange = text => {
-		console.log("change text", text);
+	handleTextChange = amount => {
+		// this.props.dispatch
+		console.log(changeCurrencyAmount(amount));
 	};
 
 	handlePressBase = () => {
-		this.props.navigation.navigate("CurrencyList", { title: 'Base Currency' });
+		this.props.navigation.navigate("CurrencyList", { title: "Base Currency" });
 	};
 
 	handlePressQuote = () => {
-		this.props.navigation.navigate("CurrencyList", { title: 'Quote Currency' });
+		this.props.navigation.navigate("CurrencyList", { title: "Quote Currency" });
 	};
 
 	handleSwap = () => {
-		console.log("swapped currencies");
+		// this.props.dispatch
+		console.log(swapCurrency());
 	};
 
 	render() {
