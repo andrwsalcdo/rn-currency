@@ -8,7 +8,7 @@ const TEMP_CURRENT_CURR = "CAD";
 
 class CurrencyList extends Component {
     handlePress = () => {
-        console.log('list item press');
+        this.props.navigation.goBack(null); 
     }
 
     render() {
