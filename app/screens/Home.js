@@ -18,7 +18,8 @@ const TEMP_CONVERSION_DATE = new Date();
 
 class Home extends Component {
 	handlePressOptions = () => {
-		console.log("handle options press");
+		// console.log("handle options press");
+		this.props.navigation.navigate('Options'); 
 	};
 
 	handleTextChange = text => {
