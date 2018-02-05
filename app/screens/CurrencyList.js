@@ -19,7 +19,7 @@ class CurrencyList extends Component {
     }
 
     render() {
-        const { currentCurrency } = this.props; 
+        const { currentCurrency, primaryColor } = this.props; 
         return (    
             <View style={{flex: 1}}>
                 <StatusBar barStyle="default" translucent={false} />
@@ -29,7 +29,8 @@ class CurrencyList extends Component {
                         <ListItem 
                             text={item}
                             selected={item === currentCurrency}
-                            onPress={() => this.handlePress(item)}    
+                            onPress={() => this.handlePress(item)}  
+                            iconBackground={primaryColor}  
                         />
                     )}
                     keyExtractor={item => item}
@@ -44,6 +45,7 @@ const mapStateToProps = (state, ownProps) => ({
     baseCurrency: state.currencies.baseCurrency,
     quoteCurrency: state.currencies.quoteCurrency,
     currentCurrency: ownProps.navigation.state.params.type === 'base' ? state.currencies.baseCurrency : state.currencies.quoteCurrency,
+    primaryColor: state.theme.primaryColor, 
 })
 
 export default connect(mapStateToProps)(CurrencyList);
