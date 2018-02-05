@@ -8,7 +8,7 @@ import { changePrimaryColor } from '../actions/theme';
 
 const styles = EStyleSheet.create({
 	$green: "$primaryGreen",
-	$blue: "$primaryBlue",
+	$purple: "$primaryPurple",
 	$red: "$primaryRed",
 	$pink: "$primaryPink"
 });
@@ -32,15 +32,15 @@ class Themes extends Component {
 				/>
 				<Separator />
 				<ListItem
-					text="Blue"
-					onPress={() => this.handleThemePress(styles.$blue)}
+					text="Purple"
+					onPress={() => this.handleThemePress(styles.$purple)}
 					selected
 					checkmark={false}
-					iconBackground={styles.$blue}
+					iconBackground={styles.$purple}
 				/>
 				<Separator />
                 <ListItem 
-                    text="Red" 
+                    text="Dark Red" 
                     onPress={() => this.handleThemePress(styles.$red)} 
                     selected 
                     checkmark={false} 

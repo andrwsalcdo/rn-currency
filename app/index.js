@@ -1,15 +1,14 @@
 import React from "react";
 import EStyleSheet from "react-native-extended-stylesheet";
-import { Provider } from 'react-redux'; 
-import Navigator from './config/routes'; 
-import store from './config/store'; 
+import { Provider } from "react-redux";
+import Navigator from "./config/routes";
+import store from "./config/store";
 
 EStyleSheet.build({
 	$primaryGreen: "#024b30",
-	$primaryBlue: "#323299",
-	$primaryRed: "#663333",
+	$primaryPurple: "#323299",
+	$primaryRed: "#990000",
 	$primaryPink: "#FF69B4",
-
 	$white: "#ffffff",
 	$separator: "#E2E2E2",
 	$inputText: "#545454",
@@ -18,4 +17,8 @@ EStyleSheet.build({
 	// $outline: 1
 });
 
-export default () => <Provider store={store}><Navigator /></Provider>; 
+export default () => (
+	<Provider store={store}>
+		<Navigator />
+	</Provider>
+);
