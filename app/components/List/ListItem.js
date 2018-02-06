@@ -5,6 +5,7 @@ import styles from "./styles";
 import Icon from "./Icon";
 
 const ListItem = ({
+	text,
 	currencySymbol,
 	currencyName,
 	selected = false,
@@ -16,6 +17,11 @@ const ListItem = ({
 }) => (
 	<TouchableHighlight onPress={onPress} underlayColor={styles.$underlayColor}>
 		<View style={styles.row}>
+			{
+				text ? 
+				<Text style={styles.text}>{text}</Text>
+				: null 
+			}
 			<Text style={styles.text}>{currencySymbol}</Text>
 			<Text style={styles.text}>{currencyName}</Text>
 			{selected ? <Icon checkmark={checkmark} visible={visible} iconBackground={iconBackground} /> : <Icon />}

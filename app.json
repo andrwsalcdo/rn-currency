@@ -1,5 +1,10 @@
 {
-  "expo": {
-    "sdkVersion": "25.0.0"
-  }
+	"expo": {
+		"sdkVersion": "25.0.0",
+    "orientation": "portrait",
+    "name": "Currency Converter",
+    "slug": "simple-currency-converter",
+    "description": "A simple currency converter made with fixer.io",
+    "privacy": "private"
+	}
 }
