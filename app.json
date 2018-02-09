@@ -5,6 +5,6 @@
     "name": "Currency Converter",
     "slug": "simple-currency-converter",
     "description": "A simple currency converter made with fixer.io",
-    "privacy": "private"
+    "privacy": "public"
 	}
 }
